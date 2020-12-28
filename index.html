@@ -152,6 +152,127 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-计算机视觉1 图像与滤波" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第1讲-图像与滤波"><a href="#第1讲-图像与滤波" class="headerlink" title="第1讲 图像与滤波"></a>第1讲 图像与滤波</h3><p>什么是图像？</p>
+<ul>
+<li>强度值的网格（矩阵）  每个值用一个字节 0黑 255白</li>
+<li>我们可以将一张(灰度) 图像看作一个函数, f ,从R2映射到R：f(x, y)给出了位置(x, y)处的强度<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224155959553.png" alt="image-20201224155959553" style="zoom:50%;" />
+
+</li>
+</ul>
+<p>图像转换</p>
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160040727.png" alt="image-20201224160040727" style="zoom:50%;" />
+
+<p>卷积(线性滤波)</p>
+<ul>
+<li><p>滤波：形成一个新的图像, 其像素是原始像素的组合</p>
+<ol>
+<li><p>从图像中获取有用信息: 提取边缘或轮廓(了解形状)</p>
+</li>
+<li><p>增强图像：要消除噪声    锐化和“增强图象”</p>
+</li>
+<li><p>卷积神经网络CNN的重要组件</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>几个典型问题</p>
+<ul>
+<li>图像恢复 -去噪  -清晰化</li>
+<li>图片压缩</li>
+<li>定位结构特征  -角点  -边缘</li>
+</ul>
+<p>图像滤波：根据每个像素局部邻域的某些函数修改图像中的像素</p>
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160651176.png" alt="image-20201224160651176" style="zoom:50%;" />
+
+
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160708390.png" alt="image-20201224160708390" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160851752.png" alt="image-20201224160851752" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160907417.png" alt="image-20201224160907417" style="zoom:50%;" />
+
+<p>卷积满足交换律、分配律和结合律</p>
+<ul>
+<li>交换律：𝐻∗𝐹=𝐹∗𝐻</li>
+<li>分配律：(𝐻+𝐹)∗𝐺=𝐻∗𝐺+𝐹∗𝐺</li>
+<li>结合律：𝐻∗𝐹∗𝐺=𝐻∗(𝐹∗𝐺)</li>
+</ul>
+<p>示例</p>
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161610291.png" alt="image-20201224161610291" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161636991.png" alt="image-20201224161636991" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161652032.png" alt="image-20201224161652032" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163211494.png" alt="image-20201224163211494" style="zoom:50%;" />
+
+<p>高斯滤波器</p>
+<ul>
+<li>从图像中删除“高频” 分量(低通滤波器)</li>
+</ul>
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163417505.png" alt="image-20201224163417505" style="zoom:50%;" />
+
+
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163525913.png" alt="image-20201224163525913" style="zoom:50%;" />
+
+<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163543861.png" alt="image-20201224163543861" style="zoom: 50%;" />
+
+<p>“光学” 卷积</p>
+<ul>
+<li>相机震动 （卷积）</li>
+<li>散景: 在图像的非焦点区域中模糊。</li>
+</ul>
+<p>滤波器：阈值</p>
+<p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224164044908.png" alt="image-20201224164044908"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%891%20%E5%9B%BE%E5%83%8F%E4%B8%8E%E6%BB%A4%E6%B3%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
