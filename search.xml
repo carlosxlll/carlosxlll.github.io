@@ -4,37 +4,37 @@
   
     
     <entry>
-      <title></title>
-      <link href="2020/12/30/hexo/"/>
-      <url>2020/12/30/hexo/</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="title：hexo基本命令"><a href="#title：hexo基本命令" class="headerlink" title="title：hexo基本命令"></a>title：hexo基本命令</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">node -v    #node版本npm -v     #npm版本#通过淘宝镜像安装cnpmnpm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  cnpm -v    #cnpm版本#通过cnpm安装hexocnpm install -g hexo-clihexo -v    #hexo版本#在计算机的喜欢位置创建blog文件夹mkdir blogcd blog&#x2F;    #进入blog文件夹hexo init   #初始化ls          #查看目录hexo s      #运行hexo#按照提示信息在默认浏览器中搜索从 localhost:4000ctrl+c  关闭hexo n &quot;写的新博客的名字&quot;    #创建新博客#按照提示信息进入文件夹，查看博客，可以用vim，typora，vscode等修改hexo clean  #先返回blog文件夹，清初信息hexo g      #生成博客# 之后再开始进端口查看。hexo d #往git上推送<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="2020/12/28/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/"/>
-      <url>2020/12/28/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="title-第1讲-图像与滤波"><a href="#title-第1讲-图像与滤波" class="headerlink" title="title:第1讲 图像与滤波"></a>title:第1讲 图像与滤波</h2><h3 id="第1讲-图像与滤波"><a href="#第1讲-图像与滤波" class="headerlink" title="第1讲 图像与滤波"></a>第1讲 图像与滤波</h3><p>什么是图像？</p><ul><li>强度值的网格（矩阵）  每个值用一个字节 0黑 255白</li><li>我们可以将一张(灰度) 图像看作一个函数, f ,从R2映射到R：f(x, y)给出了位置(x, y)处的强度<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224155959553.png" alt="image-20201224155959553" style="zoom:50%;" /></li></ul><p>图像转换</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160040727.png" alt="image-20201224160040727" style="zoom:50%;" /><p>卷积(线性滤波)</p><ul><li><p>滤波：形成一个新的图像, 其像素是原始像素的组合</p><ol><li><p>从图像中获取有用信息: 提取边缘或轮廓(了解形状)</p></li><li><p>增强图像：要消除噪声    锐化和“增强图象”</p></li><li><p>卷积神经网络CNN的重要组件</p></li></ol></li></ul><p>几个典型问题</p><ul><li>图像恢复 -去噪  -清晰化</li><li>图片压缩</li><li>定位结构特征  -角点  -边缘</li></ul><p>图像滤波：根据每个像素局部邻域的某些函数修改图像中的像素</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160651176.png" alt="image-20201224160651176" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160708390.png" alt="image-20201224160708390" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160851752.png" alt="image-20201224160851752" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160907417.png" alt="image-20201224160907417" style="zoom:50%;" /><p>卷积满足交换律、分配律和结合律</p><ul><li>交换律：𝐻∗𝐹=𝐹∗𝐻</li><li>分配律：(𝐻+𝐹)∗𝐺=𝐻∗𝐺+𝐹∗𝐺</li><li>结合律：𝐻∗𝐹∗𝐺=𝐻∗(𝐹∗𝐺)</li></ul><p>示例</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161610291.png" alt="image-20201224161610291" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161636991.png" alt="image-20201224161636991" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161652032.png" alt="image-20201224161652032" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163211494.png" alt="image-20201224163211494" style="zoom:50%;" /><p>高斯滤波器</p><ul><li>从图像中删除“高频” 分量(低通滤波器)</li></ul><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163417505.png" alt="image-20201224163417505" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163525913.png" alt="image-20201224163525913" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163543861.png" alt="image-20201224163543861" style="zoom: 50%;" /><p>“光学” 卷积</p><ul><li>相机震动 （卷积）</li><li>散景: 在图像的非焦点区域中模糊。</li></ul><p>滤波器：阈值</p><p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224164044908.png" alt="image-20201224164044908"></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hello World</title>
       <link href="2020/12/28/hello-world/"/>
       <url>2020/12/28/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo命令</title>
+      <link href="2020/11/28/hexo/"/>
+      <url>2020/11/28/hexo/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">node -v    #node版本npm -v     #npm版本#通过淘宝镜像安装cnpmnpm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  cnpm -v    #cnpm版本#通过cnpm安装hexocnpm install -g hexo-clihexo -v    #hexo版本#在计算机的喜欢位置创建blog文件夹mkdir blogcd blog&#x2F;    #进入blog文件夹hexo init   #初始化ls          #查看目录hexo s      #运行hexo#按照提示信息在默认浏览器中搜索从 localhost:4000ctrl+c  关闭hexo n &quot;写的新博客的名字&quot;    #创建新博客#按照提示信息进入文件夹，查看博客，可以用vim，typora，vscode等修改hexo clean  #先返回blog文件夹，清初信息hexo g      #生成博客# 之后再开始进端口查看。hexo deploy #往git上推送<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第1讲 图像与滤波</title>
+      <link href="2010/09/07/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/"/>
+      <url>2010/09/07/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/</url>
+      
+        <content type="html"><![CDATA[<h3 id="第1讲-图像与滤波"><a href="#第1讲-图像与滤波" class="headerlink" title="第1讲 图像与滤波"></a>第1讲 图像与滤波</h3><p>什么是图像？</p><ul><li>强度值的网格（矩阵）  每个值用一个字节 0黑 255白</li><li>我们可以将一张(灰度) 图像看作一个函数, f ,从R2映射到R：f(x, y)给出了位置(x, y)处的强度<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224155959553.png" alt="image-20201224155959553" style="zoom:50%;" /></li></ul><p>图像转换</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160040727.png" alt="image-20201224160040727" style="zoom:50%;" /><p>卷积(线性滤波)</p><ul><li><p>滤波：形成一个新的图像, 其像素是原始像素的组合</p><ol><li><p>从图像中获取有用信息: 提取边缘或轮廓(了解形状)</p></li><li><p>增强图像：要消除噪声    锐化和“增强图象”</p></li><li><p>卷积神经网络CNN的重要组件</p></li></ol></li></ul><p>几个典型问题</p><ul><li>图像恢复 -去噪  -清晰化</li><li>图片压缩</li><li>定位结构特征  -角点  -边缘</li></ul><p>图像滤波：根据每个像素局部邻域的某些函数修改图像中的像素</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160651176.png" alt="image-20201224160651176" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160708390.png" alt="image-20201224160708390" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160851752.png" alt="image-20201224160851752" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160907417.png" alt="image-20201224160907417" style="zoom:50%;" /><p>卷积满足交换律、分配律和结合律</p><ul><li>交换律：𝐻∗𝐹=𝐹∗𝐻</li><li>分配律：(𝐻+𝐹)∗𝐺=𝐻∗𝐺+𝐹∗𝐺</li><li>结合律：𝐻∗𝐹∗𝐺=𝐻∗(𝐹∗𝐺)</li></ul><p>示例</p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161610291.png" alt="image-20201224161610291" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161636991.png" alt="image-20201224161636991" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161652032.png" alt="image-20201224161652032" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163211494.png" alt="image-20201224163211494" style="zoom:50%;" /><p>高斯滤波器</p><ul><li>从图像中删除“高频” 分量(低通滤波器)</li></ul><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163417505.png" alt="image-20201224163417505" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163525913.png" alt="image-20201224163525913" style="zoom:50%;" /><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163543861.png" alt="image-20201224163543861" style="zoom: 50%;" /><p>“光学” 卷积</p><ul><li>相机震动 （卷积）</li><li>散景: 在图像的非焦点区域中模糊。</li></ul><p>滤波器：阈值</p><p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224164044908.png" alt="image-20201224164044908"></p>]]></content>
       
       
       

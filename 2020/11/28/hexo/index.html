@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo">
+    <meta name="keywords" content="hexo命令, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo</title>
+    <title>hexo命令 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -400,12 +400,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">hexo命令</h1>
                 </div>
             </div>
         </div>
@@ -533,7 +533,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-28
+                    2020-11-28
                 </div>
                 
 
@@ -542,7 +542,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    289
+                    192
                 </div>
                 
 
@@ -562,81 +562,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="title-第1讲-图像与滤波"><a href="#title-第1讲-图像与滤波" class="headerlink" title="title:第1讲 图像与滤波"></a>title:第1讲 图像与滤波</h2><h3 id="第1讲-图像与滤波"><a href="#第1讲-图像与滤波" class="headerlink" title="第1讲 图像与滤波"></a>第1讲 图像与滤波</h3><p>什么是图像？</p>
-<ul>
-<li>强度值的网格（矩阵）  每个值用一个字节 0黑 255白</li>
-<li>我们可以将一张(灰度) 图像看作一个函数, f ,从R2映射到R：f(x, y)给出了位置(x, y)处的强度<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224155959553.png" alt="image-20201224155959553" style="zoom:50%;" />
+                <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">node -v    #node版本
+npm -v     #npm版本
+#通过淘宝镜像安装cnpm
+npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  
+cnpm -v    #cnpm版本
+#通过cnpm安装hexo
+cnpm install -g hexo-cli
+hexo -v    #hexo版本
 
-</li>
-</ul>
-<p>图像转换</p>
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160040727.png" alt="image-20201224160040727" style="zoom:50%;" />
-
-<p>卷积(线性滤波)</p>
-<ul>
-<li><p>滤波：形成一个新的图像, 其像素是原始像素的组合</p>
-<ol>
-<li><p>从图像中获取有用信息: 提取边缘或轮廓(了解形状)</p>
-</li>
-<li><p>增强图像：要消除噪声    锐化和“增强图象”</p>
-</li>
-<li><p>卷积神经网络CNN的重要组件</p>
-</li>
-</ol>
-</li>
-</ul>
-<p>几个典型问题</p>
-<ul>
-<li>图像恢复 -去噪  -清晰化</li>
-<li>图片压缩</li>
-<li>定位结构特征  -角点  -边缘</li>
-</ul>
-<p>图像滤波：根据每个像素局部邻域的某些函数修改图像中的像素</p>
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160651176.png" alt="image-20201224160651176" style="zoom:50%;" />
+#在计算机的喜欢位置创建blog文件夹
+mkdir blog
+cd blog&#x2F;    #进入blog文件夹
+hexo init   #初始化
+ls          #查看目录
+hexo s      #运行hexo
+#按照提示信息在默认浏览器中搜索从 localhost:4000
+ctrl+c  关闭
+hexo n &quot;写的新博客的名字&quot;    #创建新博客
+#按照提示信息进入文件夹，查看博客，可以用vim，typora，vscode等修改
+hexo clean  #先返回blog文件夹，清初信息
+hexo g      #生成博客
+# 之后再开始进端口查看。
+hexo deploy #往git上推送
 
 
 
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160708390.png" alt="image-20201224160708390" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160851752.png" alt="image-20201224160851752" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224160907417.png" alt="image-20201224160907417" style="zoom:50%;" />
-
-<p>卷积满足交换律、分配律和结合律</p>
-<ul>
-<li>交换律：𝐻∗𝐹=𝐹∗𝐻</li>
-<li>分配律：(𝐻+𝐹)∗𝐺=𝐻∗𝐺+𝐹∗𝐺</li>
-<li>结合律：𝐻∗𝐹∗𝐺=𝐻∗(𝐹∗𝐺)</li>
-</ul>
-<p>示例</p>
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161610291.png" alt="image-20201224161610291" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161636991.png" alt="image-20201224161636991" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224161652032.png" alt="image-20201224161652032" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163211494.png" alt="image-20201224163211494" style="zoom:50%;" />
-
-<p>高斯滤波器</p>
-<ul>
-<li>从图像中删除“高频” 分量(低通滤波器)</li>
-</ul>
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163417505.png" alt="image-20201224163417505" style="zoom:50%;" />
 
 
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163525913.png" alt="image-20201224163525913" style="zoom:50%;" />
-
-<img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224163543861.png" alt="image-20201224163543861" style="zoom: 50%;" />
-
-<p>“光学” 卷积</p>
-<ul>
-<li>相机震动 （卷积）</li>
-<li>散景: 在图像的非焦点区域中模糊。</li>
-</ul>
-<p>滤波器：阈值</p>
-<p><img src="C:\Users\carlos\AppData\Roaming\Typora\typora-user-images\image-20201224164044908.png" alt="image-20201224164044908"></p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -663,7 +617,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/12/28/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/">http://example.com/2020/12/28/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/</a>
+                    <a href="http://example.com/2020/11/28/hexo/">http://example.com/2020/11/28/hexo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -872,13 +826,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/30/hexo/">
+                <a href="/2020/12/28/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -889,7 +843,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
                         </span>
                         <span class="publish-author">
                             
@@ -909,13 +863,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/28/hello-world/">
+                <a href="/2010/09/07/ji-suan-ji-shi-jue-1-tu-xiang-yu-lu-bo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="第1讲 图像与滤波">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">第1讲 图像与滤波</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -926,7 +880,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2010-09-07
                             </span>
                         <span class="publish-author">
                             
@@ -1135,7 +1089,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">561</span>&nbsp;字
+                class="white-color">547</span>&nbsp;字
             
             
             
